@@ -124,39 +124,80 @@ function renderCards(items, targetId, type = 'info') {
 function renderGallery(album, gallery) {
   const title = document.getElementById('gallery-title');
   const subtitle = document.getElementById('gallery-subtitle');
-  const target = document.getElementById('gallery-grid');
+  const note = document.getElementById('gallery-note');
+  const mainImage = document.getElementById('gallery-main-image');
+  const caption = document.getElementById('gallery-caption');
+  const counter = document.getElementById('gallery-counter');
+  const thumbs = document.getElementById('gallery-thumbs');
+  const prev = document.getElementById('gallery-prev');
+  const next = document.getElementById('gallery-next');
+  const thumbPrev = document.getElementById('gallery-thumb-prev');
+  const thumbNext = document.getElementById('gallery-thumb-next');
+  const showcase = document.getElementById('gallery-showcase');
 
-  if (!target) return;
+  if (!mainImage || !thumbs) return;
+  const photos = Array.isArray(gallery) ? gallery : [];
+
   if (album?.title) title.textContent = album.title;
   if (album?.subtitle) subtitle.textContent = album.subtitle;
+  if (album?.note) note.textContent = album.note;
 
-  target.innerHTML = '';
-  (gallery || []).forEach((photo, index) => {
-    const figure = el('figure', 'gallery-item');
-    const link = el('a', '', '');
-    link.href = safeUrl(photo.src);
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
+  if (!photos.length) {
+    mainImage.removeAttribute('src');
+    mainImage.alt = 'No gallery photos configured yet.';
+    caption.textContent = 'No gallery photos configured yet.';
+    counter.textContent = '';
+    thumbs.innerHTML = '';
+    return;
+  }
+
+  let current = 0;
+  thumbs.innerHTML = '';
+
+  const thumbButtons = photos.map((photo, index) => {
+    const button = el('button', 'gallery-thumb', '');
+    button.type = 'button';
+    button.setAttribute('aria-label', `Show photo ${index + 1}`);
 
     const img = el('img', '', '');
     img.src = photo.src;
-    img.alt = photo.alt || `Featured photo ${index + 1}`;
+    img.alt = photo.alt || `Photo thumbnail ${index + 1}`;
     img.loading = 'lazy';
 
-    link.appendChild(img);
-    figure.appendChild(link);
-
-    if (photo.caption) {
-      const caption = el('figcaption', '', photo.caption);
-      figure.appendChild(caption);
-    }
-
-    target.appendChild(figure);
+    button.appendChild(img);
+    button.addEventListener('click', () => showPhoto(index));
+    thumbs.appendChild(button);
+    return button;
   });
 
-  if (!(gallery || []).length) {
-    target.appendChild(el('p', '', 'No gallery photos configured yet.'));
+  function showPhoto(index) {
+    current = (index + photos.length) % photos.length;
+    const photo = photos[current];
+    mainImage.src = photo.src;
+    mainImage.alt = photo.alt || `Featured photo ${current + 1}`;
+    caption.textContent = photo.caption || '';
+    counter.textContent = `${current + 1} / ${photos.length}`;
+
+    thumbButtons.forEach((button, i) => {
+      const active = i === current;
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-current', active ? 'true' : 'false');
+    });
+
+    thumbButtons[current]?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
   }
+
+  prev?.addEventListener('click', () => showPhoto(current - 1));
+  next?.addEventListener('click', () => showPhoto(current + 1));
+  thumbPrev?.addEventListener('click', () => thumbs.scrollBy({ left: -220, behavior: 'smooth' }));
+  thumbNext?.addEventListener('click', () => thumbs.scrollBy({ left: 220, behavior: 'smooth' }));
+
+  showcase?.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') showPhoto(current - 1);
+    if (event.key === 'ArrowRight') showPhoto(current + 1);
+  });
+
+  showPhoto(0);
 }
 
 function renderTimeline(items, targetId, isEducation = false) {

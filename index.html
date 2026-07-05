@@ -110,14 +110,29 @@
 
     <section id="gallery" class="section">
       <div class="container">
-        <div class="section-head">
-          <div>
+        <div class="gallery-showcase" id="gallery-showcase" aria-label="Featured photo slideshow">
+          <div class="gallery-stage-card">
+            <div class="gallery-stage">
+              <button class="gallery-nav gallery-nav-prev" id="gallery-prev" type="button" aria-label="Previous photo">‹</button>
+              <img id="gallery-main-image" src="" alt="Featured photo" />
+              <button class="gallery-nav gallery-nav-next" id="gallery-next" type="button" aria-label="Next photo">›</button>
+            </div>
+            <div class="gallery-caption" id="gallery-caption"></div>
+            <div class="gallery-thumbs-wrap" aria-label="Photo thumbnails">
+              <button class="gallery-thumb-scroll" id="gallery-thumb-prev" type="button" aria-label="Scroll thumbnails left">‹</button>
+              <div class="gallery-thumbs" id="gallery-thumbs"></div>
+              <button class="gallery-thumb-scroll" id="gallery-thumb-next" type="button" aria-label="Scroll thumbnails right">›</button>
+            </div>
+          </div>
+
+          <div class="gallery-copy">
             <p class="section-label">Gallery</p>
             <h2 id="gallery-title">Featured photos</h2>
+            <p class="section-note" id="gallery-subtitle">A small personal album for the website profile.</p>
+            <p class="gallery-note" id="gallery-note"></p>
+            <div class="gallery-counter" id="gallery-counter"></div>
           </div>
-          <p class="section-note" id="gallery-subtitle">A small personal album for the website profile.</p>
         </div>
-        <div class="gallery-grid" id="gallery-grid" aria-label="Featured photo album"></div>
       </div>
     </section>
 
