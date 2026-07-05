@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Lam Nguyen — Postdoctoral Researcher in mobile security, privacy, Android app analysis, and agentic AI." />
+  <meta name="author" content="Lam Nguyen" />
+  <meta property="og:title" content="Lam Nguyen — Mobile Security, Privacy & Agentic AI" />
+  <meta property="og:description" content="Research portfolio, publications, projects, skills, CV, and live venue rankings." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lamnguyentt92.github.io/" />
+  <link rel="canonical" href="https://lamnguyentt92.github.io/" />
+  <title>Lam Nguyen — Mobile Security, Privacy & Agentic AI</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script type="application/ld+json" id="schema-person"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Lam Nguyen home">
+        <span class="brand-mark">LN</span>
+        <span class="brand-text">Lam Nguyen</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" id="profile-kicker">Postdoctoral Researcher</p>
+          <h1 id="profile-name">Lam Nguyen</h1>
+          <p class="hero-title" id="profile-title">Mobile Security & Privacy · Agentic AI · Android App Analysis</p>
+          <p class="hero-summary" id="profile-summary"></p>
+          <div class="hero-actions" id="profile-links"></div>
+        </div>
+        <aside class="profile-card" aria-label="Profile summary">
+          <div class="avatar" aria-hidden="true">LN</div>
+          <h2 id="card-name">Lam Nguyen</h2>
+          <p id="card-affiliation"></p>
+          <div class="meta-list" id="profile-meta"></div>
+          <div class="quick-metrics" id="quick-metrics"></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="section section-soft">
+      <div class="container two-col">
+        <div>
+          <p class="section-label">About</p>
+          <h2>Building evidence-grounded systems for mobile security and privacy.</h2>
+        </div>
+        <div>
+          <p id="about-text"></p>
+          <div class="tag-cloud" id="interest-tags"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-label">Research focus</p>
+            <h2>Research themes</h2>
+          </div>
+          <p class="section-note">Selected themes extracted from the academic and industrial CVs.</p>
+        </div>
+        <div class="card-grid" id="research-grid"></div>
+      </div>
+    </section>
+
+    <section id="publications" class="section section-soft">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-label">Publications</p>
+            <h2>Selected publications with venue rankings</h2>
+          </div>
+          <p class="section-note">Conference ranks are refreshed from CORE/ICORE when available; journal quartiles are refreshed from SCImago or a supplied ranking file.</p>
+        </div>
+
+        <div class="toolbar" aria-label="Publication filters">
+          <input id="pub-search" type="search" placeholder="Search title, venue, year, DOI..." aria-label="Search publications" />
+          <select id="pub-filter" aria-label="Filter publications">
+            <option value="all">All types</option>
+            <option value="journal">Journals</option>
+            <option value="conference">Conferences</option>
+            <option value="book">Book chapters</option>
+            <option value="under-review">Under review</option>
+          </select>
+          <button id="refresh-ranks" class="secondary-button" type="button">Reload ranks</button>
+        </div>
+        <div class="rank-note" id="rank-note"></div>
+        <div class="publication-list" id="publication-list"></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-label">Systems</p>
+            <h2>Selected projects</h2>
+          </div>
+          <p class="section-note">Research systems and production engineering experience.</p>
+        </div>
+        <div class="card-grid" id="project-grid"></div>
+      </div>
+    </section>
+
+    <section id="resume" class="section section-soft">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-label">Resume</p>
+            <h2>Experience and education</h2>
+          </div>
+          <div class="hero-actions compact">
+            <a class="primary-button" href="assets/docs/Lam_Nguyen_CV_Academic.pdf">Academic CV</a>
+            <a class="secondary-button" href="assets/docs/Lam_Nguyen_CV_Industry.pdf">Industry CV</a>
+          </div>
+        </div>
+        <div class="resume-grid">
+          <div>
+            <h3>Experience</h3>
+            <div class="timeline" id="experience-timeline"></div>
+          </div>
+          <div>
+            <h3>Education</h3>
+            <div class="timeline" id="education-timeline"></div>
+            <h3 class="skills-title">Skills</h3>
+            <div class="skill-groups" id="skills"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-card">
+        <div>
+          <p class="section-label">Contact</p>
+          <h2>Let’s collaborate on mobile privacy, Android security, and trustworthy agentic AI.</h2>
+          <p id="contact-text"></p>
+        </div>
+        <div class="contact-links" id="contact-links"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Lam Nguyen. Built for GitHub Pages.</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

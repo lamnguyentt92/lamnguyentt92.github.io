@@ -1,0 +1,77 @@
+name: Optional update Google Scholar metadata and deploy website
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Optional monthly run. Requires SERPAPI_API_KEY repository secret.
+    - cron: "30 6 1 * *"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  update-scholar:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip && pip install -r requirements.txt
+
+      - name: Refresh Scholar cache via SerpAPI
+        env:
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+        run: |
+          if [ -z "$SERPAPI_API_KEY" ]; then
+            echo "SERPAPI_API_KEY is not set; skipping Scholar update."
+            exit 0
+          fi
+          python scripts/update_scholar_serpapi.py --author-id Yt6EcJYAAAAJ --out data/scholar.json
+
+      - name: Commit Scholar updates
+        run: |
+          if [ ! -f data/scholar.json ]; then
+            echo "No Scholar cache file generated."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/scholar.json
+          if git diff --cached --quiet; then
+            echo "No Scholar changes."
+          else
+            git commit -m "Update Google Scholar metadata"
+            git push
+          fi
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare static site artifact
+        run: |
+          mkdir -p _site
+          rsync -av             --exclude='.git'             --exclude='.github'             --exclude='.venv'             --exclude='__pycache__'             --exclude='_site'             ./ _site/
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

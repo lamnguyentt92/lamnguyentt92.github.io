@@ -1,0 +1,73 @@
+{
+  "last_updated": "2026-07-05",
+  "method": "Initial seed from CV + public ranking pages. Run scripts/update_ranks.py or GitHub Actions to refresh.",
+  "rankings": {
+    "wisec": {
+      "venue": "ACM Conference on Security and Privacy in Wireless and Mobile Networks",
+      "type": "conference",
+      "rank": "B",
+      "rank_system": "CORE/ICORE",
+      "rank_year": "ICORE2026 / CORE2023",
+      "source_url": "https://portal.core.edu.au/conf-ranks/2313/",
+      "note": "CORE/ICORE uses A*, A, B, C. D is displayed only when no ranking is found."
+    },
+    "wimob": {
+      "venue": "IEEE International Conference on Wireless and Mobile Computing, Networking and Communications",
+      "type": "conference",
+      "rank": "B",
+      "rank_system": "CORE/ICORE",
+      "rank_year": "CORE2023",
+      "source_url": "https://portal.core.edu.au/conf-ranks/679/"
+    },
+    "aiccsa": {
+      "venue": "ACS/IEEE International Conference on Computer Systems and Applications",
+      "type": "conference",
+      "rank": "C",
+      "rank_system": "CORE/ICORE",
+      "rank_year": "ICORE2026 / CORE2023",
+      "source_url": "https://portal.core.edu.au/conf-ranks/86/"
+    },
+    "iccsa": {
+      "venue": "International Conference on Computational Science and its Applications",
+      "type": "conference",
+      "rank": "C",
+      "rank_system": "CORE/ICORE",
+      "rank_year": "ICORE2026",
+      "source_url": "https://portal.core.edu.au/conf-ranks/953/"
+    },
+    "tdsc": {
+      "venue": "IEEE Transactions on Dependable and Secure Computing",
+      "type": "journal",
+      "rank": "Q1",
+      "rank_system": "SCImago SJR",
+      "rank_year": "2025",
+      "source_url": "https://www.scimagojr.com/journalsearch.php?q=28918&tip=sid",
+      "note": "Target journal for a manuscript under review; not a confirmed publication venue."
+    },
+    "pmc": {
+      "venue": "Pervasive and Mobile Computing",
+      "type": "journal",
+      "rank": "Q1",
+      "rank_system": "SCImago SJR",
+      "rank_year": "latest available",
+      "source_url": "https://www.scimagojr.com/journalsearch.php?q=3200147819&tip=sid"
+    },
+    "peerj-cs": {
+      "venue": "PeerJ Computer Science",
+      "type": "journal",
+      "rank": "Q1",
+      "rank_system": "SCImago SJR",
+      "rank_year": "latest available",
+      "source_url": "https://www.scimagojr.com/journalsearch.php?q=21100830173&tip=sid"
+    },
+    "book-ai-cybersecurity": {
+      "venue": "AI for Cybersecurity: Research and Practice",
+      "type": "book",
+      "rank": "N/A",
+      "rank_system": "N/A",
+      "rank_year": "N/A",
+      "source_url": "",
+      "note": "Book chapters usually do not receive CORE conference ranks or SCImago journal quartiles."
+    }
+  }
+}

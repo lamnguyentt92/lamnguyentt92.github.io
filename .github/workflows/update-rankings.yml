@@ -1,0 +1,66 @@
+name: Update rankings and deploy website
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Run every Monday at 06:00 UTC. Rankings change slowly, so daily refresh is unnecessary.
+    - cron: "0 6 * * 1"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  update-rankings:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip && pip install -r requirements.txt
+
+      - name: Refresh ranking cache
+        run: python scripts/update_ranks.py --data data/site-data.json --out data/rankings.json
+
+      - name: Commit ranking updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/rankings.json
+          if git diff --cached --quiet; then
+            echo "No ranking changes."
+          else
+            git commit -m "Update publication rankings"
+            git push
+          fi
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare static site artifact
+        run: |
+          mkdir -p _site
+          rsync -av             --exclude='.git'             --exclude='.github'             --exclude='.venv'             --exclude='__pycache__'             --exclude='_site'             ./ _site/
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

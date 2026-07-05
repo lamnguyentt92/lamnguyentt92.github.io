@@ -1,0 +1,388 @@
+{
+  "profile": {
+    "name": "Lam Nguyen",
+    "full_name": "Tran Thanh Lam Nguyen",
+    "kicker": "Postdoctoral Researcher",
+    "title": "Mobile Security & Privacy · Android App Analysis · Agentic AI",
+    "affiliation": "Department of Theoretical and Applied Sciences (DiSTA), University of Insubria, Varese, Italy",
+    "location": "Varese, Italy · Ho Chi Minh City, Vietnam",
+    "summary": "I design evidence-grounded systems for mobile security and privacy, combining Android static/dynamic analysis, taint analysis, network traffic inspection, RAG/GraphRAG, and LLM-based reasoning to detect and explain privacy violations at scale.",
+    "about": "I am a postdoctoral researcher in Computer Science working at the intersection of mobile security, privacy compliance, Android app analysis, and agentic AI. My research focuses on building end-to-end systems that detect, explain, and mitigate privacy violations in mobile ecosystems, including GDPR/CCPA-related transparency, consent, and data-sharing issues. I also bring production engineering experience in backend systems, DevOps, Kubernetes, API gateways, CI/CD, and automation, which helps me design research prototypes with deployment and scalability in mind.",
+    "emails": [
+      "thanhlam.bk.2110@gmail.com",
+      "lam.nguyen@uninsubria.it"
+    ],
+    "links": [
+      {
+        "label": "Email",
+        "url": "mailto:thanhlam.bk.2110@gmail.com",
+        "primary": true
+      },
+      {
+        "label": "Google Scholar",
+        "url": "https://scholar.google.com/citations?hl=en&user=Yt6EcJYAAAAJ&view_op=list_works&sortby=pubdate"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/lamnguyentt92"
+      },
+      {
+        "label": "ORCID",
+        "url": "https://orcid.org/0000-0003-0991-6157"
+      },
+      {
+        "label": "Academic CV",
+        "url": "assets/docs/Lam_Nguyen_CV_Academic.pdf"
+      },
+      {
+        "label": "Industry CV",
+        "url": "assets/docs/Lam_Nguyen_CV_Industry.pdf"
+      }
+    ],
+    "metrics": [
+      {
+        "value": "5+",
+        "label": "Research systems"
+      },
+      {
+        "value": "8",
+        "label": "Selected works"
+      },
+      {
+        "value": "5000+",
+        "label": "Apps analyzed in MetaLeak"
+      },
+      {
+        "value": "2347",
+        "label": "Apps evaluated in PrivacyAssist"
+      }
+    ],
+    "interests": [
+      "Agentic AI for security and privacy",
+      "Mobile and wearable privacy",
+      "Android app analysis",
+      "Privacy compliance and transparency",
+      "RAG and GraphRAG",
+      "Context-aware policy synthesis",
+      "Privacy-preserving data sharing",
+      "MCP/A2A agent systems"
+    ]
+  },
+  "research": [
+    {
+      "title": "Mobile privacy auditing",
+      "description": "Automated systems that combine app evidence, disclosures, dynamic traffic, and LLM reasoning to detect data-practice inconsistencies."
+    },
+    {
+      "title": "Wearable app compliance",
+      "description": "Frameworks for estimating non-compliance and responsibility in wearable companion apps using taint analysis, RAG, and GraphRAG."
+    },
+    {
+      "title": "Agentic AI for Android",
+      "description": "Root-anchored mobile app exploration that discovers feature flows and synthesizes executable goals for mobile agents."
+    },
+    {
+      "title": "Evidence-based policy synthesis",
+      "description": "Fine-grained, context-aware access-control policies derived from multi-source evidence and optimized for privacy and usability."
+    },
+    {
+      "title": "Metadata leakage detection",
+      "description": "Hybrid and source-code analysis pipelines for detecting sensitive EXIF metadata leakage in mobile image-sharing apps."
+    },
+    {
+      "title": "Production-ready research systems",
+      "description": "Cloud-native engineering experience in Kubernetes, API gateways, CI/CD, DevOps automation, and backend systems."
+    }
+  ],
+  "projects": [
+    {
+      "name": "WearPri",
+      "description": "Pre-release privacy auditing framework for Android wearable companion apps, estimating data-sharing non-compliance and attributing responsibility to app developers or third-party services.",
+      "stack": [
+        "Android",
+        "Taint analysis",
+        "GraphRAG",
+        "RAG",
+        "LLM code summarization"
+      ]
+    },
+    {
+      "name": "EBPS",
+      "description": "Evidence-Based Policy Synthesis for Android, deriving fine-grained privacy-policy candidates from multi-source app evidence and LLM-driven reasoning.",
+      "stack": [
+        "Android",
+        "Policy synthesis",
+        "LLM reasoning",
+        "Optimization"
+      ]
+    },
+    {
+      "name": "RootFlow",
+      "description": "Root-anchored mobile app exploration framework that builds feature-flow graphs and synthesizes executable goals for LLM-based mobile agents.",
+      "stack": [
+        "Android",
+        "Dynamic analysis",
+        "Feature-flow graph",
+        "Agentic AI"
+      ]
+    },
+    {
+      "name": "MetaLeak",
+      "description": "Hybrid-analysis framework detecting sensitive EXIF image metadata leakage in Android apps through static permission analysis and dynamic network inspection.",
+      "stack": [
+        "Static analysis",
+        "MITM proxy",
+        "Android AVD",
+        "Network traffic"
+      ]
+    },
+    {
+      "name": "ALIBIS",
+      "description": "Automated source-code risk estimation system for sensitive metadata leakage, combining static analysis, code-block extraction, RAG, and LLM summarization.",
+      "stack": [
+        "Static analysis",
+        "RAG",
+        "LLM",
+        "Android library"
+      ]
+    },
+    {
+      "name": "PrivacyAssist",
+      "description": "User-centric multi-agent privacy assistant that detects inconsistencies between user-granted permissions and declared data practices during app installation.",
+      "stack": [
+        "Multi-agent system",
+        "RAG",
+        "Android",
+        "User study"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Postdoctoral Researcher — Agentic AI for Mobile Security and Privacy",
+      "organization": "University of Insubria, DiSTA",
+      "location": "Varese, Italy",
+      "period": "11/2025 – Present",
+      "description": "Leading WearPri, EBPS, and RootFlow: systems for wearable privacy auditing, evidence-based policy synthesis, and root-anchored mobile app exploration."
+    },
+    {
+      "role": "Ph.D. Candidate — Mobile and Wearable App Security/Privacy",
+      "organization": "University of Insubria",
+      "location": "Varese, Italy",
+      "period": "11/2022 – 11/2025",
+      "description": "Designed MetaLeak, ALIBIS, WearLeak, and PrivacyAssist for privacy compliance, metadata leakage detection, and user-centric protection."
+    },
+    {
+      "role": "Senior DevOps Engineer",
+      "organization": "Home Credit Vietnam — OpenAPI Team",
+      "location": "Ho Chi Minh City, Vietnam",
+      "period": "10/2021 – 12/2022",
+      "description": "Automated Kong API Gateway infrastructure, CI/CD, Kubernetes deployments, GitOps workflows, zero-downtime canary releases, and disaster recovery."
+    },
+    {
+      "role": "Backend Developer and DevOps Engineer",
+      "organization": "VNPT Information Technology Company",
+      "location": "Ho Chi Minh City, Vietnam",
+      "period": "01/2018 – 09/2021",
+      "description": "Designed backend APIs and production platforms including SSO, conferencing, GIS, storage, and messaging services using Go, Docker, Kubernetes, and Jenkins."
+    }
+  ],
+  "education": [
+    {
+      "degree": "Ph.D. in Computer Science",
+      "school": "University of Insubria",
+      "location": "Varese, Italy",
+      "period": "01/11/2022 – 11/2025",
+      "description": "Security and Privacy. Thesis: Security and Privacy Analysis of Mobile and Wearable Applications."
+    },
+    {
+      "degree": "Master of Engineering in Telecommunications Engineering",
+      "school": "University of Technology — Vietnam National University Ho Chi Minh City",
+      "location": "Ho Chi Minh City, Vietnam",
+      "period": "01/09/2015 – 26/04/2018",
+      "description": "Thesis: Elliptic Curve Cryptography algorithm and application to build a Smart-Auto Parking system."
+    },
+    {
+      "degree": "Bachelor of Engineering in Electrical-Electronics Engineering",
+      "school": "University of Technology — Vietnam National University Ho Chi Minh City",
+      "location": "Ho Chi Minh City, Vietnam",
+      "period": "01/09/2010 – 15/04/2015",
+      "description": "Honors Program, Electronics-Telecommunications. Thesis: Integrated smart parking and RFID-based access-control system."
+    }
+  ],
+  "skills": {
+    "Programming": [
+      "Python",
+      "Go",
+      "Android",
+      "PHP",
+      "Bash",
+      "Linux command line"
+    ],
+    "Security analysis": [
+      "Static analysis",
+      "Dynamic analysis",
+      "Taint analysis",
+      "Reverse engineering",
+      "MITM traffic inspection"
+    ],
+    "AI systems": [
+      "Few-shot learning",
+      "RAG",
+      "RAG-Fusion",
+      "GraphRAG",
+      "Corrective RAG",
+      "LangChain",
+      "LangGraph",
+      "MCP",
+      "Agent-to-Agent"
+    ],
+    "DevOps / Platform": [
+      "Kubernetes",
+      "Docker",
+      "Jenkins",
+      "GitLab CI/CD",
+      "Ansible",
+      "Kong API Gateway",
+      "Istio",
+      "Elastic Stack",
+      "AWS"
+    ],
+    "Data / Graphs": [
+      "Neo4j",
+      "MongoDB",
+      "MySQL",
+      "Knowledge graphs"
+    ],
+    "Languages": [
+      "Vietnamese native",
+      "English professional proficiency"
+    ]
+  },
+  "publications": [
+    {
+      "id": "wearpri-tdsc-2026",
+      "type": "under-review",
+      "year": 2026,
+      "title": "WearPri: Compliance and responsibility estimation in wearable apps",
+      "authors": "Tran Thanh Lam Nguyen, Barbara Carminati, Elena Ferrari",
+      "venue": "IEEE Transactions on Dependable and Secure Computing",
+      "venue_key": "tdsc",
+      "doi": "",
+      "links": [],
+      "note": "Manuscript under review. Ranking is shown for the target journal only; remove it if the venue changes."
+    },
+    {
+      "id": "alibis-pmc-2026",
+      "type": "journal",
+      "year": 2026,
+      "title": "ALIBIS: Assessing and mitigating the risk of sensitive metadata leakage in mobile image sharing",
+      "authors": "Tran Thanh Lam Nguyen, Barbara Carminati, Elena Ferrari",
+      "venue": "Pervasive and Mobile Computing",
+      "venue_key": "pmc",
+      "doi": "10.1016/j.pmcj.2026.102171",
+      "links": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1016/j.pmcj.2026.102171"
+        }
+      ]
+    },
+    {
+      "id": "privacyassist-wisec-2026",
+      "type": "conference",
+      "year": 2026,
+      "title": "PrivacyAssist: A user-centric agent framework for detecting privacy inconsistencies in Android apps",
+      "authors": "Tran Thanh Lam Nguyen, Edoardo Di Tullio, Barbara Carminati, Elena Ferrari",
+      "venue": "Proceedings of the 19th ACM Conference on Security and Privacy in Wireless and Mobile Networks (ACM WiSec)",
+      "venue_key": "wisec",
+      "doi": "",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2604.23248"
+        }
+      ]
+    },
+    {
+      "id": "wearleak-wimob-2025",
+      "type": "conference",
+      "year": 2025,
+      "title": "Detecting privacy non-compliance in wearable apps via knowledge graphs and LLMs",
+      "authors": "Tran Thanh Lam Nguyen, Barbara Carminati, Elena Ferrari",
+      "venue": "IEEE WiMob 2025",
+      "venue_key": "wimob",
+      "doi": "10.1109/WiMob66857.2025.11257567",
+      "links": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1109/WiMob66857.2025.11257567"
+        }
+      ]
+    },
+    {
+      "id": "book-ai-cybersecurity-2025",
+      "type": "book",
+      "year": 2025,
+      "title": "LLMs on support of privacy and security of mobile apps: State-of-the-art and research directions",
+      "authors": "Tran Thanh Lam Nguyen, Barbara Carminati, Elena Ferrari",
+      "venue": "AI for Cybersecurity: Research and Practice, Wiley-IEEE Press",
+      "venue_key": "book-ai-cybersecurity",
+      "doi": "10.1002/9781394293773.ch02",
+      "links": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1002/9781394293773.ch02"
+        }
+      ]
+    },
+    {
+      "id": "metaleak-aiccsa-2024",
+      "type": "conference",
+      "year": 2024,
+      "title": "MetaLeak: Assessing image metadata leakage in Android apps",
+      "authors": "Tran Thanh Lam Nguyen, Barbara Carminati, Elena Ferrari",
+      "venue": "IEEE/ACS AICCSA 2024",
+      "venue_key": "aiccsa",
+      "doi": "10.1109/AICCSA63423.2024.10912621",
+      "links": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1109/AICCSA63423.2024.10912621"
+        }
+      ]
+    },
+    {
+      "id": "bmdd-peerj-2022",
+      "type": "journal",
+      "year": 2022,
+      "title": "BMDD: A novel approach for IoT platform",
+      "authors": "Tran Thanh Lam Nguyen, Son Xuan Ha, Trieu Hai Le, Huong Hoang Luong, Khanh Hong Vo, Khoi Huynh Tuan Nguyen, Tuan Anh Dao, Hy Vuong Khang Nguyen, et al.",
+      "venue": "PeerJ Computer Science",
+      "venue_key": "peerj-cs",
+      "doi": "10.7717/peerj-cs.950",
+      "links": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.7717/peerj-cs.950"
+        }
+      ]
+    },
+    {
+      "id": "iot-platform-iccsa-2021",
+      "type": "conference",
+      "year": 2021,
+      "title": "Toward a security IoT platform with high-rate transmission and low energy consumption",
+      "authors": "Tran Thanh Lam Nguyen, The Anh Nguyen, Hong Khanh Vo, Hoang Huong Luong, Khoi Nguyen Huynh Tuan, Anh Tuan Dao, Ha Xuan Son",
+      "venue": "ICCSA 2021, Springer",
+      "venue_key": "iccsa",
+      "doi": "10.1007/978-3-030-86653-2_47",
+      "links": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1007/978-3-030-86653-2_47"
+        }
+      ]
+    }
+  ]
+}
