@@ -45,6 +45,17 @@ function renderProfile(profile) {
   document.getElementById('about-text').textContent = profile.about;
   document.getElementById('contact-text').textContent = `Email me at ${profile.emails.join(' or ')}.`;
 
+  const avatar = document.getElementById('profile-avatar');
+  if (profile.avatar) {
+    avatar.textContent = '';
+    avatar.style.backgroundImage = `url('${profile.avatar}')`;
+    avatar.style.backgroundSize = 'cover';
+    avatar.style.backgroundPosition = 'center';
+  } else {
+    avatar.textContent = (profile.name || 'LN').split(' ').map(x => x[0]).join('').slice(0, 2);
+    avatar.style.backgroundImage = '';
+  }
+
   const links = document.getElementById('profile-links');
   const contactLinks = document.getElementById('contact-links');
   links.innerHTML = '';
@@ -72,8 +83,8 @@ function renderProfile(profile) {
   const meta = document.getElementById('profile-meta');
   meta.innerHTML = '';
   [
-    ['Role', profile.kicker],
-    ['Affiliation', 'University of Insubria'],
+    ['Role', profile.role || profile.kicker],
+    ['Profile', profile.kicker],
     ['Location', profile.location]
   ].forEach(([label, value]) => {
     const item = el('div', 'meta-item');
@@ -107,6 +118,45 @@ function renderCards(items, targetId, type = 'info') {
     }
     target.appendChild(card);
   });
+}
+
+
+function renderGallery(album, gallery) {
+  const title = document.getElementById('gallery-title');
+  const subtitle = document.getElementById('gallery-subtitle');
+  const target = document.getElementById('gallery-grid');
+
+  if (!target) return;
+  if (album?.title) title.textContent = album.title;
+  if (album?.subtitle) subtitle.textContent = album.subtitle;
+
+  target.innerHTML = '';
+  (gallery || []).forEach((photo, index) => {
+    const figure = el('figure', 'gallery-item');
+    const link = el('a', '', '');
+    link.href = safeUrl(photo.src);
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+
+    const img = el('img', '', '');
+    img.src = photo.src;
+    img.alt = photo.alt || `Featured photo ${index + 1}`;
+    img.loading = 'lazy';
+
+    link.appendChild(img);
+    figure.appendChild(link);
+
+    if (photo.caption) {
+      const caption = el('figcaption', '', photo.caption);
+      figure.appendChild(caption);
+    }
+
+    target.appendChild(figure);
+  });
+
+  if (!(gallery || []).length) {
+    target.appendChild(el('p', '', 'No gallery photos configured yet.'));
+  }
 }
 
 function renderTimeline(items, targetId, isEducation = false) {
@@ -194,7 +244,8 @@ function renderSchema(profile, publications) {
     '@type': 'Person',
     name: profile.full_name,
     alternateName: profile.name,
-    jobTitle: profile.kicker,
+    jobTitle: profile.role || profile.kicker,
+    description: profile.summary,
     affiliation: {
       '@type': 'Organization',
       name: 'University of Insubria'
@@ -231,6 +282,7 @@ async function init() {
 
     renderProfile(site.profile);
     renderCards(site.research, 'research-grid');
+    renderGallery(site.album, site.gallery);
     renderCards(site.projects, 'project-grid', 'project');
     renderTimeline(site.experience, 'experience-timeline');
     renderTimeline(site.education, 'education-timeline', true);

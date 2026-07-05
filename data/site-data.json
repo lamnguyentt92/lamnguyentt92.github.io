@@ -2,12 +2,12 @@
   "profile": {
     "name": "Lam Nguyen",
     "full_name": "Tran Thanh Lam Nguyen",
-    "kicker": "Postdoctoral Researcher",
-    "title": "Mobile Security & Privacy · Android App Analysis · Agentic AI",
-    "affiliation": "Department of Theoretical and Applied Sciences (DiSTA), University of Insubria, Varese, Italy",
-    "location": "Varese, Italy · Ho Chi Minh City, Vietnam",
-    "summary": "I design evidence-grounded systems for mobile security and privacy, combining Android static/dynamic analysis, taint analysis, network traffic inspection, RAG/GraphRAG, and LLM-based reasoning to detect and explain privacy violations at scale.",
-    "about": "I am a postdoctoral researcher in Computer Science working at the intersection of mobile security, privacy compliance, Android app analysis, and agentic AI. My research focuses on building end-to-end systems that detect, explain, and mitigate privacy violations in mobile ecosystems, including GDPR/CCPA-related transparency, consent, and data-sharing issues. I also bring production engineering experience in backend systems, DevOps, Kubernetes, API gateways, CI/CD, and automation, which helps me design research prototypes with deployment and scalability in mind.",
+    "kicker": "Ph.D. in Computer Science (Security & Privacy)",
+    "title": "Mobile Security & Privacy · Android App Analysis · Agentic AI Systems",
+    "affiliation": "Ph.D. in Computer Science, University of Insubria · Open to AI Security, Mobile Security, and Agentic AI opportunities",
+    "location": "Italy · Vietnam",
+    "summary": "I hold a Ph.D. in Computer Science with a specialization in Security and Privacy. I build evidence-grounded systems for mobile and wearable privacy, Android app analysis, and agentic AI, combining static/dynamic analysis, taint analysis, network traffic inspection, RAG/GraphRAG, and LLM-based reasoning.",
+    "about": "I am a computer scientist specializing in mobile security and privacy, Android app analysis, privacy compliance, and agentic AI. My work focuses on building end-to-end systems that detect, explain, and mitigate privacy violations in mobile and wearable ecosystems. I have designed research systems such as MetaLeak, ALIBIS, WearLeak, WearPri, PrivacyAssist, EBPS, and RootFlow, and I also bring production engineering experience in backend systems, Kubernetes, API gateways, CI/CD, and automation. This website is written to be future-proof for my next professional step, so it presents me as a Ph.D. researcher and AI/security engineer rather than as a current Postdoctoral Researcher at Insubria.",
     "emails": [
       "thanhlam.bk.2110@gmail.com",
       "lam.nguyen@uninsubria.it"
@@ -41,16 +41,16 @@
     ],
     "metrics": [
       {
-        "value": "5+",
-        "label": "Research systems"
+        "value": "Ph.D.",
+        "label": "Computer Science — Security & Privacy"
       },
       {
         "value": "8",
-        "label": "Selected works"
+        "label": "Selected publications / works"
       },
       {
         "value": "5000+",
-        "label": "Apps analyzed in MetaLeak"
+        "label": "Android apps analyzed in MetaLeak"
       },
       {
         "value": "2347",
@@ -58,15 +58,17 @@
       }
     ],
     "interests": [
-      "Agentic AI for security and privacy",
-      "Mobile and wearable privacy",
+      "Mobile security and privacy",
       "Android app analysis",
+      "Wearable app privacy",
       "Privacy compliance and transparency",
+      "Agentic AI for security",
       "RAG and GraphRAG",
-      "Context-aware policy synthesis",
-      "Privacy-preserving data sharing",
-      "MCP/A2A agent systems"
-    ]
+      "Evidence-based policy synthesis",
+      "Privacy-preserving MCP/A2A systems"
+    ],
+    "role": "AI Security & Privacy Engineer · Mobile Security Researcher · Agentic AI Systems",
+    "avatar": "assets/img/avatar.jpg"
   },
   "research": [
     {
@@ -162,8 +164,8 @@
       "role": "Postdoctoral Researcher — Agentic AI for Mobile Security and Privacy",
       "organization": "University of Insubria, DiSTA",
       "location": "Varese, Italy",
-      "period": "11/2025 – Present",
-      "description": "Leading WearPri, EBPS, and RootFlow: systems for wearable privacy auditing, evidence-based policy synthesis, and root-anchored mobile app exploration."
+      "period": "11/2025 – 07/2026",
+      "description": "Led and developed WearPri, EBPS, and RootFlow: systems for wearable privacy auditing, evidence-based policy synthesis, and root-anchored mobile app exploration for agentic AI. This role is listed as a completed appointment to keep the website ready for the next position."
     },
     {
       "role": "Ph.D. Candidate — Mobile and Wearable App Security/Privacy",
@@ -384,5 +386,82 @@
         }
       ]
     }
-  ]
+  ],
+  "gallery": [
+    {
+      "src": "assets/img/gallery/photo-01.jpg",
+      "alt": "Featured photo 01 from Lam Nguyen's personal and academic album",
+      "caption": "Featured moment 01"
+    },
+    {
+      "src": "assets/img/gallery/photo-02.jpg",
+      "alt": "Featured photo 02 from Lam Nguyen's personal and academic album",
+      "caption": "Featured moment 02"
+    },
+    {
+      "src": "assets/img/gallery/photo-03.jpg",
+      "alt": "Featured photo 03 from Lam Nguyen's personal and academic album",
+      "caption": "Featured moment 03"
+    },
+    {
+      "src": "assets/img/gallery/photo-04.jpg",
+      "alt": "Featured photo 04 from Lam Nguyen's personal and academic album",
+      "caption": "Featured moment 04"
+    },
+    {
+      "src": "assets/img/gallery/photo-05.jpg",
+      "alt": "Featured photo 05 from Lam Nguyen's personal and academic album",
+      "caption": "Featured moment 05"
+    },
+    {
+      "src": "assets/img/gallery/photo-06.jpg",
+      "alt": "Featured photo 06 from Lam Nguyen's personal and academic album",
+      "caption": "Featured moment 06"
+    },
+    {
+      "src": "assets/img/gallery/photo-07.jpg",
+      "alt": "Featured photo 07 from Lam Nguyen's personal and academic album",
+      "caption": "Featured moment 07"
+    },
+    {
+      "src": "assets/img/gallery/photo-08.jpg",
+      "alt": "Featured photo 08 from Lam Nguyen's personal and academic album",
+      "caption": "Featured moment 08"
+    },
+    {
+      "src": "assets/img/gallery/photo-09.jpg",
+      "alt": "Featured photo 09 from Lam Nguyen's personal and academic album",
+      "caption": "Featured moment 09"
+    },
+    {
+      "src": "assets/img/gallery/photo-10.jpg",
+      "alt": "Featured photo 10 from Lam Nguyen's personal and academic album",
+      "caption": "Featured moment 10"
+    },
+    {
+      "src": "assets/img/gallery/photo-11.jpg",
+      "alt": "Featured photo 11 from Lam Nguyen's personal and academic album",
+      "caption": "Featured moment 11"
+    },
+    {
+      "src": "assets/img/gallery/photo-12.jpg",
+      "alt": "Featured photo 12 from Lam Nguyen's personal and academic album",
+      "caption": "Featured moment 12"
+    },
+    {
+      "src": "assets/img/gallery/photo-13.jpg",
+      "alt": "Featured photo 13 from Lam Nguyen's personal and academic album",
+      "caption": "Featured moment 13"
+    },
+    {
+      "src": "assets/img/gallery/photo-14.jpg",
+      "alt": "Featured photo 14 from Lam Nguyen's personal and academic album",
+      "caption": "Featured moment 14"
+    }
+  ],
+  "album": {
+    "title": "Featured photos",
+    "subtitle": "A small personal album for the website profile.",
+    "note": "Images are stored locally under assets/img/gallery/ and can be replaced without changing the website code."
+  }
 }

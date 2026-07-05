@@ -1,6 +1,6 @@
 # Lam Nguyen — GitHub Pages Profile Website
 
-This repository contains the GitHub Pages-ready profile website for **Tran Thanh Lam Nguyen**.
+This repository contains the GitHub Pages-ready profile website for **Tran Thanh Lam Nguyen**. The current version is written to present Lam as a **Ph.D. in Computer Science (Security & Privacy)** and AI/security engineer, not as an active Postdoctoral Researcher.
 
 Configured target GitHub account:
 
@@ -31,7 +31,10 @@ The site is static HTML/CSS/JavaScript. Python is **not** executed by GitHub Pag
 ├── requirements.txt                   # Python dependencies for ranking update scripts
 ├── assets/
 │   ├── css/style.css                  # Site styling
-│   ├── js/main.js                     # Dynamic rendering of profile/publications/rankings
+│   ├── js/main.js                     # Dynamic rendering of profile/publications/rankings/gallery
+│   ├── img/
+│   │   ├── avatar.jpg                 # Profile avatar image
+│   │   └── gallery/                   # Featured photo album images
 │   └── docs/
 │       ├── Lam_Nguyen_CV_Academic.pdf
 │       └── Lam_Nguyen_CV_Industry.pdf
@@ -79,7 +82,9 @@ data/site-data.json
 Important blocks:
 
 ```text
-profile       name, title, emails, affiliation, links, interests, biography
+profile       name, role, avatar, emails, links, interests, biography
+album         gallery section title/subtitle
+gallery       featured photo list shown as an album
 research      research-theme cards
 projects      WearPri, EBPS, RootFlow, MetaLeak, ALIBIS, PrivacyAssist
 experience    academic and industrial timeline
@@ -108,7 +113,46 @@ data/rankings.json
 
 ---
 
-## 4. How automatic ranking updates work
+## 4. Avatar and featured photo album
+
+The avatar displayed in the profile card is configured here:
+
+```json
+"profile": {
+  "avatar": "assets/img/avatar.jpg"
+}
+```
+
+The featured album is configured in `data/site-data.json`:
+
+```json
+"gallery": [
+  {
+    "src": "assets/img/gallery/photo-01.jpg",
+    "alt": "Featured photo 01 from Lam Nguyen's personal and academic album",
+    "caption": "Featured moment 01"
+  }
+]
+```
+
+To replace the avatar:
+
+```powershell
+copy C:\path\to\new-avatar.jpg assets\img\avatar.jpg
+git add assets/img/avatar.jpg data/site-data.json
+git commit -m "Update avatar"
+git push
+```
+
+To add a gallery photo:
+
+1. Copy a compressed `.jpg` image into `assets/img/gallery/`.
+2. Add one JSON item to the `gallery` array in `data/site-data.json`.
+3. Commit and push.
+
+---
+
+## 5. How automatic ranking updates work
 
 The website displays cached rankings from:
 
@@ -150,7 +194,7 @@ Journal quartiles are fetched best-effort from SCImago pages. SCImago does not p
 
 ---
 
-## 5. Test ranking update locally
+## 6. Test ranking update locally
 
 ```powershell
 cd C:\Users\ASUS\Downloads\lamnguyentt92.github.io
@@ -176,7 +220,7 @@ py -3.11 -m http.server 8000
 
 ---
 
-## 6. Create the GitHub.io repository
+## 7. Create the GitHub.io repository
 
 Create a new repository under your account:
 
@@ -200,7 +244,7 @@ Do not add a README/license/gitignore from GitHub if you will push this source f
 
 ---
 
-## 7. Upload the website source to GitHub
+## 8. Upload the website source to GitHub
 
 From the folder that directly contains `index.html`:
 
@@ -269,7 +313,7 @@ https://lamnguyentt92.github.io/
 
 ---
 
-## 9. Enable GitHub Actions write permission
+## 10. Enable GitHub Actions write permission
 
 The ranking workflow needs permission to commit updates to `data/rankings.json`.
 
