@@ -289,8 +289,8 @@
       "title": "PrivacyAssist: A user-centric agent framework for detecting privacy inconsistencies in Android apps",
       "authors": "Tran Thanh Lam Nguyen, Edoardo Di Tullio, Barbara Carminati, Elena Ferrari",
       "venue": "Proceedings of the 19th ACM Conference on Security and Privacy in Wireless and Mobile Networks (ACM WiSec)",
-      "venue_key": "wisec",
-      "doi": "",
+      "venue_key": "WiSec",
+      "doi": "10.1145/3765613.3811680",
       "links": [
         {
           "label": "DOI",
@@ -305,7 +305,7 @@
       "title": "Detecting privacy non-compliance in wearable apps via knowledge graphs and LLMs",
       "authors": "Tran Thanh Lam Nguyen, Barbara Carminati, Elena Ferrari",
       "venue": "IEEE WiMob 2025",
-      "venue_key": "wimob",
+      "venue_key": "The 21st International Conference on Wireless and Mobile Computing, Networking and Communications (IEEE WiMob)",
       "doi": "10.1109/WiMob66857.2025.11257567",
       "links": [
         {
@@ -336,7 +336,7 @@
       "year": 2024,
       "title": "MetaLeak: Assessing image metadata leakage in Android apps",
       "authors": "Tran Thanh Lam Nguyen, Barbara Carminati, Elena Ferrari",
-      "venue": "IEEE/ACS AICCSA 2024",
+      "venue": "The ACS/IEEE 21st International Conference on Computer Systems and Applications (IEEE AICCSA 2024)",
       "venue_key": "aiccsa",
       "doi": "10.1109/AICCSA63423.2024.10912621",
       "links": [
@@ -368,7 +368,7 @@
       "year": 2021,
       "title": "Toward a security IoT platform with high-rate transmission and low energy consumption",
       "authors": "Tran Thanh Lam Nguyen, The Anh Nguyen, Hong Khanh Vo, Hoang Huong Luong, Khoi Nguyen Huynh Tuan, Anh Tuan Dao, Ha Xuan Son",
-      "venue": "ICCSA 2021, Springer",
+      "venue": "Computational Science and Its Applications (ICCSA 2021, Springer)",
       "venue_key": "iccsa",
       "doi": "10.1007/978-3-030-86653-2_47",
       "links": [
